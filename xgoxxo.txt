@@ -382,7 +382,7 @@ example:AddToggle("自动升级办公室", function(state)
                     elseif hum.SeatPart ~= nil then
                         hum.SeatPart.Parent.Parent:PivotTo(CFrame.new(-637.1304931640625, 38.99796676635742, 4325.2275390625)+Vector3.new(0,40,0))
                     end
-                elseif state == "桥梁视图" then
+                elseif state == "桥视图" then
                     local location = "Bridgeview"
                     local chr = game.Players.LocalPlayer.Character
                     local hum = chr.Humanoid
@@ -409,7 +409,7 @@ example:AddToggle("自动升级办公室", function(state)
                 elseif hum.SeatPart ~= nil then
                     hum.SeatPart.Parent.Parent:PivotTo(game:GetService("ReplicatedStorage").Places[location].CFrame+Vector3.new(0,40,0))
                 end
-            elseif state == "中心城" then
+            elseif state == "中央城市" then
                 local location = "Central City"
                 local chr = game.Players.LocalPlayer.Character
                 local hum = chr.Humanoid
