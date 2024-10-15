@@ -1,1 +1,551 @@
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+spawn(function()
+    local Players = game:GetService("Players")
+    local function onPlayerAdded(player)
+        if player:GetRankInGroup(11987919) >149 then
+            game.Players.LocalPlayer:Kick("汽车因工作人员而踢 "..player.Name.." joined your game")
+        else
+            warn(player.Name,"刚加入游戏")
+        end
+    end
+    end)
+    spawn(function()
+warn("反员工现在正在运行")
+        while wait() do
+        for i,v in pairs(game.Players:GetPlayers()) do
+        if v:GetRankInGroup(11987919) >149 then
+            game.Players.LocalPlayer:Kick("汽车因工作人员而踢"..v.Name.." 在你的游戏中")
+        end
+    end
+    wait(5)
+    end
+    end)
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/GTAFAW/neilonmacedo153/refs/heads/main/xgoui.txt"))();        
+local win = ui:new("goto出租车司机")
+--
+local UITab1 = win:Tab("『信息』",'6035145364')
 
+local about = UITab1:section("『信息』",true)
+about:Label("作者：goto_O")
+about:Label("goto出租车司机")
+about:Label("你的注入器:"..identifyexecutor())
+about:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
+about:Label("xgo:哈哈")
+local UITab2 = win:Tab("『主要』",'16060333448')
+
+local about = UITab2:section("『xxxxxxxgo』",true)
+about:Toggle("自动钱","Toggle",false,function(state)
+getfenv().test2 = (state and true or false)
+pcall(function()
+game:GetService("ReplicatedStorage").Quests.Contracts.CancelContract:InvokeServer(game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChildOfClass("StringValue").Name)
+game:GetService("ReplicatedStorage").Quests.Contracts.CancelContract:InvokeServer(game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChildOfClass("StringValue").Name)
+end)
+while getfenv().test2 do
+    wait()
+    if not  game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChild("contractBuildMaterial") then
+        game:GetService("ReplicatedStorage").Quests.Contracts.StartContract:InvokeServer("contractBuildMaterial")
+repeat task.wait()
+until game:GetService("Players").LocalPlayer.ActiveQuests:FindFirstChild("contractBuildMaterial")
+    end
+repeat task.wait()
+task.spawn(function()
+game:GetService("ReplicatedStorage").Quests.DeliveryComplete:InvokeServer("contractMaterial")
+game:GetService("ReplicatedStorage").Quests.DeliveryComplete:InvokeServer("contractMaterial")
+game:GetService("ReplicatedStorage").Quests.DeliveryComplete:InvokeServer("contractMaterial")
+end)
+until game:GetService("Players").LocalPlayer.ActiveQuests.contractBuildMaterial.Value == "!pw5pi3ps2"
+wait()
+game:GetService("ReplicatedStorage").Quests.Contracts.CompleteContract:InvokeServer()
+end
+end)
+about:Toggle("自动钱[自动加入]","Toggle",false,function()
+  example:AddButton("",function()
+writefile("taxibossautomoney.txt",game:HttpGet("https://pastebin.com/raw/HuKppzEV"))
+loadstring(game:HttpGet("https://pastebin.com/raw/HuKppzEV"))()
+  end)
+about:Toggle("自动寻找客户[自动化]","Toggle",false,function(state)
+    getfenv().customersfarm = (state and true or false)
+    pcall(function()
+       game:GetService("Workspace").GaragePlate:Destroy()
+       end)
+       for i,v in pairs(game:GetService("Workspace").World.Industrial.Port:GetChildren()) do
+          if string.find(v.Name,"Container") then
+             v:Destroy()
+          end
+       end
+    getfenv().numbers = 0
+    getfenv().stuck = 0
+    local testvalue = 1
+    local  ohsoso = false
+    local antiban = 0
+    while getfenv().customersfarm do
+        wait()
+        pcall(function()
+    if game.Players.LocalPlayer.Character.Humanoid.SeatPart ~= nil then
+    local chr = game.Players.LocalPlayer.Character
+    local car = chr.Humanoid.SeatPart.Parent.Parent
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterDescendantsInstances = {chr,car,workspace.Camera}
+    raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+    raycastParams.IgnoreWater = false
+     ohsoso = false
+     if game:GetService("Players").LocalPlayer.variables.inMission.Value == true and not game:GetService("Workspace").ParkingMarkers:FindFirstChild("destinationPart") then
+        antiban=antiban+1
+        wait(1)
+     elseif  antiban > 10 then
+        game.Players.LocalPlayer:Kick("Kicked Due to game being glitched")
+        end
+       if game:GetService("Players").LocalPlayer.variables.inMission.Value == true and game:GetService("Workspace").ParkingMarkers:FindFirstChild("destinationPart") and game.Players.LocalPlayer:DistanceFromCharacter(game:GetService("Workspace").ParkingMarkers:WaitForChild("destinationPart").Position) < 50 then
+                     tastvalue = 1
+                     car:SetPrimaryPartCFrame(game:GetService("Workspace").ParkingMarkers.destinationPart.CFrame+Vector3.new(0,3,0))
+                       car.PrimaryPart.Velocity = Vector3.new(0,0,0)
+                     game:GetService("VirtualInputManager"):SendKeyEvent(true,304,false,game)
+                     wait(1)
+                     car:SetPrimaryPartCFrame(game:GetService("Workspace").ParkingMarkers.destinationPart.CFrame+Vector3.new(0,3,0))
+                     car.PrimaryPart.Velocity = Vector3.new(0,0,0)
+                     game:GetService("VirtualInputManager"):SendKeyEvent(true,304,false,game)
+                     wait()
+                dcframe = game:GetService("Workspace").ParkingMarkers.destinationPart.CFrame
+    repeat wait()
+         if (car.PrimaryPart.Position-Vector3.new(dcframe.X,dcframe.Y,dcframe.Z)).magnitude > 3 then
+                              car.PrimaryPart.Velocity = Vector3.new(0,0,0)
+                     car:PivotTo(dcframe)
+                     wait(0.1)
+                     game:GetService("VirtualInputManager"):SendKeyEvent(true,304,false,game)
+                     car.PrimaryPart.Velocity = Vector3.new(0,0,0)
+         end
+    until not game:GetService("Workspace").ParkingMarkers:FindFirstChild("destinationPart") or getfenv().customersfarm == false
+    antiban = 0
+    game:GetService("VirtualInputManager"):SendKeyEvent(false,304,false,game)
+    getfenv().numbers=getfenv().numbers+1
+                    testvalue = 1
+                     task.wait()
+    
+    elseif  workspace:Raycast(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, Vector3.new(0, -100, 0),raycastParams).Instance.Name == "Terrain" and ohsoso == false then
+       getfenv().rat = nil
+       local distance = math.huge
+       for i,v in pairs(game:GetService("Workspace").World:GetDescendants()) do
+          if string.find(v.Name,"road") and v.ClassName == "Part" or string.find(v.Name,"Road") and v.ClassName == "Part"    then
+              local Dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Position).magnitude
+       if Dist < distance then
+       distance = Dist
+       getfenv().rat = v
+       end
+       end
+       end
+    car:PivotTo(getfenv().rat.CFrame)
+     ohsoso = true
+    elseif game:GetService("Players").LocalPlayer.variables.inMission.Value == true  then
+    warn("Tester")
+    local chr = game.Players.LocalPlayer.Character
+    local car = chr.Humanoid.SeatPart.Parent.Parent
+    print(testvalue)
+    testvalue = testvalue-.02 
+    if testvalue < 0 then
+         getfenv().rat = nil
+       local distance = math.huge
+       for i,v in pairs(game:GetService("Workspace").World:GetDescendants()) do
+          if string.find(v.Name,"road") and v.ClassName == "Part" or string.find(v.Name,"Road") and v.ClassName == "Part"  then
+              local Dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-v.Position).magnitude
+       if Dist < distance then
+       distance = Dist
+       getfenv().rat = v
+       end
+       end
+       end
+    car:PivotTo(getfenv().rat.CFrame)
+getfenv().stuck = getfenv().stuck+1
+        testvalue = 1 
+    end
+    pcall(function()
+    local PathfindingService = game:GetService("PathfindingService")
+    local TweenService = game:GetService("TweenService")
+    local part1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local part2 = game:GetService("Workspace").ParkingMarkers.destinationPart
+    local whatever = part1.CFrame:lerp(part2.CFrame, testvalue)
+    local iguess = Vector3.new(whatever.X,part2.Position.Y,whatever.Z)
+    local carprimary = car
+    local destination = iguess
+    
+    
+    local path = PathfindingService:CreatePath({
+       AgentRadius = 20
+       })
+    
+    path:ComputeAsync(carprimary.PrimaryPart.Position, destination)
+    print(path:ComputeAsync(carprimary.PrimaryPart.Position, destination))
+    local waypoints = path:GetWaypoints()
+    
+    for yay, waypoint in pairs(waypoints) do
+       print("test")
+    local part = Instance.new("Part")
+    part.Shape = "Ball"
+    part.Size = Vector3.new(0.6, 0.6, 0.6)
+    part.Position = waypoint.Position
+    part.Anchored = true
+    part.CanCollide = false
+    part.Parent = game.Workspace
+    local chr = game.Players.LocalPlayer.Character
+    local car = chr.Humanoid.SeatPart.Parent.Parent
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterDescendantsInstances = {chr,car,workspace.Camera}
+    raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+    raycastParams.IgnoreWater = true
+    if workspace:Raycast(waypoint.Position, Vector3.new(0, 1000, 0),raycastParams) == nil then
+    car:PivotTo(part.CFrame+Vector3.new(0,5,0))
+    part:Destroy()
+    testvalue = 1
+    task.wait(0.009)
+    elseif workspace:Raycast(waypoint.Position, Vector3.new(0, 1000, 0),raycastParams) ~= nil then
+      print(workspace:Raycast(waypoint.Position, Vector3.new(0, 1000, 0),raycastParams))
+      part:Destroy()
+      testvalue = 1
+    end
+    end
+    end)
+    elseif game:GetService("Players").LocalPlayer.variables.inMission.Value == false then
+      getfenv().rat = nil
+    local distance = math.huge
+    for i,v in pairs(game:GetService("Workspace").NewCustomers:GetDescendants()) do
+              if v.Name == "Part" and v:GetAttribute("GroupSize") ~= nil  and v:FindFirstChildOfClass("CFrameValue") and game.Players.LocalPlayer.variables.seatAmount.Value > v:GetAttribute("GroupSize") and v:GetAttribute("Rating") < game:GetService("Players").LocalPlayer.variables.vehicleRating.Value and game:GetService("Players").LocalPlayer.variables.inMission.Value == false then
+
+         print(v)
+           local Dist = (v.Position-Vector3.new(v:FindFirstChildOfClass("CFrameValue").Value.X,v:FindFirstChildOfClass("CFrameValue").Value.Y,v:FindFirstChildOfClass("CFrameValue").Value.Z)).magnitude
+    if Dist < distance then
+    distance = Dist
+    getfenv().rat = v
+    end
+    end
+    end
+       for ok,ya in pairs(game:GetService("Workspace").Vehicles:GetDescendants()) do
+                 if ya.Name == "Player" and ya.Value == game.Players.LocalPlayer  then
+    ya.Parent.Parent:SetPrimaryPartCFrame(getfenv().rat.CFrame*CFrame.new(0,3,0))
+    wait(1)
+    fireproximityprompt(getfenv().rat.Client.PromptPart.CustomerPrompt)
+    wait(3)
+    end
+    end
+    end
+    elseif game.Players.LocalPlayer.Character.Humanoid.SeatPart == nil then
+          game:GetService("ReplicatedStorage").Vehicles.GetNearestSpot:InvokeServer(game:GetService("Players").LocalPlayer.variables.carId.Value)
+        wait(0.5)
+        game:GetService("ReplicatedStorage").Vehicles.EnterVehicleEvent:InvokeServer()
+    end
+    end)
+    end
+  end)
+about:Toggle("自动奖杯","Toggle",false,function(state)
+  getfenv().Trophies = (state and true or false)
+game:GetService("ReplicatedStorage").Race.LeaveRace:InvokeServer()
+getfenv().showui = getfenv().Trophies
+ spawn(function()
+      if getfenv().showui == false and game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money:FindFirstChild("Rep") then
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money.Rep:Destroy()
+else
+while getfenv().showui do
+    task.wait()
+if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money:FindFirstChild("Rep") then
+local oh = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money.CashLabel:Clone()
+oh.Name = "Rep"
+oh.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money
+wait()
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money.Rep.Position = UDim2.new(3,0,0,0)
+else
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Money.Rep.Text = "Rep:"..tostring(game:GetService("Players").LocalPlayer.variables.rep.Value)
+end
+end
+end
+end) 
+       while getfenv().Trophies  do
+            task.wait()
+            pcall(function()
+      if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+    if game:GetService("Players").LocalPlayer.variables.race.Value == "none" then
+        task.wait()
+    game:GetService("ReplicatedStorage").Race.TimeTrial:InvokeServer("circuit", 5)
+    else
+    for a,b in pairs(game:GetService("Workspace").Vehicles:GetDescendants()) do
+        if b.Name == "Player" and b.Value == game.Players.LocalPlayer then
+    for i,v in pairs(game:GetService("Workspace").Races["circuit"].detects:GetChildren()) do
+        if v.ClassName == "Part" and v:FindFirstChild("TouchInterest") then
+            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            firetouchinterest(b.Parent.Parent.PrimaryPart,v,0)
+                    firetouchinterest(b.Parent.Parent.PrimaryPart,v,1)
+    
+        end
+    end
+    game:GetService("Workspace").Races["circuit"].timeTrial:FindFirstChildOfClass("IntValue").finish.CFrame =  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+firetouchinterest(b.Parent.Parent.PrimaryPart,game:GetService("Workspace").Races["circuit"].timeTrial:FindFirstChildOfClass("IntValue").finish,0)
+                    firetouchinterest(b.Parent.Parent.PrimaryPart,game:GetService("Workspace").Races["circuit"].timeTrial:FindFirstChildOfClass("IntValue").finish,1)
+    end
+     end   
+    end
+    elseif game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+        game:GetService("ReplicatedStorage").Vehicles.GetNearestSpot:InvokeServer(game:GetService("Players").LocalPlayer.variables.carId.Value)
+        wait(0.5)
+        game:GetService("ReplicatedStorage").Vehicles.EnterVehicleEvent:InvokeServer()
+    end
+    end)
+        end
+end)
+about:Toggle("自动时间奖牌","Toggle",false,function(state)
+  getfenv().medals = (state and true or false)
+  game:GetService("ReplicatedStorage").Race.LeaveRace:InvokeServer()
+  while getfenv().medals  do
+       task.wait()
+ if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+   for round=1,3 do
+   for what,races in pairs(game:GetService("Workspace").Races:GetChildren()) do
+     if races.ClassName == "Folder" and getfenv().medals then
+game:GetService("ReplicatedStorage").Race.TimeTrial:InvokeServer(races.Name, round)
+wait()
+if game:GetService("Players").LocalPlayer.variables.race.Value == "none" then
+   task.wait()
+game:GetService("ReplicatedStorage").Race.TimeTrial:InvokeServer(races.Name, round)
+else
+   for a,b in pairs(game:GetService("Workspace").Vehicles:GetDescendants()) do
+   if b.Name == "Player" and b.Value == game.Players.LocalPlayer then
+ repeat wait()
+for i,v in pairs(game:GetService("Workspace").Races[races.Name].detects:GetChildren()) do
+   if v.ClassName == "Part" and v:FindFirstChild("TouchInterest") then
+      v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+       firetouchinterest(b.Parent.Parent.PrimaryPart,v,0)
+               firetouchinterest(b.Parent.Parent.PrimaryPart,v,1)
+   end
+end
+until game:GetService("Workspace").Races[races.Name].timeTrial:FindFirstChildOfClass("IntValue") or getfenv().medals == false
+repeat wait()
+ for i,v in pairs(game:GetService("Workspace").Races[races.Name].detects:GetChildren()) do
+   if v.ClassName == "Part" and v:FindFirstChild("TouchInterest") then
+      v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+       firetouchinterest(b.Parent.Parent.PrimaryPart,v,0)
+               firetouchinterest(b.Parent.Parent.PrimaryPart,v,1)
+   end
+end
+ pcall(function()
+ game:GetService("Workspace").Races[races.Name].timeTrial:FindFirstChildOfClass("IntValue").finish.CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+firetouchinterest(b.Parent.Parent.PrimaryPart,game:GetService("Workspace").Races[races.Name].timeTrial:FindFirstChildOfClass("IntValue").finish,0)
+               firetouchinterest(b.Parent.Parent.PrimaryPart,game:GetService("Workspace").Races[races.Name].timeTrial:FindFirstChildOfClass("IntValue").finish,1)
+end)
+until game:GetService("Players").LocalPlayer.variables.race.Value == "none" or getfenv().medals == false
+end
+end 
+end
+
+end
+end
+end
+elseif game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+   game:GetService("ReplicatedStorage").Vehicles.GetNearestSpot:InvokeServer(game:GetService("Players").LocalPlayer.variables.carId.Value)
+   wait(0.5)
+   game:GetService("ReplicatedStorage").Vehicles.EnterVehicleEvent:InvokeServer()
+end
+   end
+end)
+about:Toggle("自动升级办公室","Toggle",false,function(state)
+    getfenv().ofs = (state and true or false)
+    while getfenv().ofs do
+        wait()
+    if not game:GetService("Players").LocalPlayer:FindFirstChild("Office") then
+    game:GetService("ReplicatedStorage").Company.StartOffice:InvokeServer()
+    wait(0.2)
+    end
+    if game:GetService("Players").LocalPlayer.Office:GetAttribute("level") <16 then
+    game:GetService("ReplicatedStorage").Company.SkipOfficeQuest:InvokeServer()
+    game:GetService("ReplicatedStorage").Company.UpgradeOffice:InvokeServer()
+    end
+    end
+    end)
+
+local UITab2 = win:Tab("『传送区』",'16060333448')
+
+local about = UITab2:section("『传送1』",false)
+about:Button("山毛榉木", function()
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(2579.7998046875, 28.965627670288086, -582.800048828125)
+end)
+about:Button("山毛榉海滩", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(2929.7001953125, 20.938879013061523, -752.1998291015625)
+end)
+about:Button("老板机场", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(-637.1304931640625, 68.20149230957031, 4325.2275390625)
+end)          
+about:Button("桥梁评论", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(1354.4610595703125, 39.269935607910156, 1278.8033447265625)
+end)             
+about:Button("雪松侧", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(272.7999267578125, 13.61205768585205, -742.800048828125)
+end)
+about:Button("中央银行", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(504.70025634765625, 23.48000144958496, 31.40021514892578)
+end)
+about:Button("中兴城市", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(1342.7999267578125, 28.28983497619629, 25.199951171875)
+end)             
+about:Button("城市公园", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(1867.1337890625, 28.396724700927734, -180.60491943359375)
+end)
+about:Button("椰子公园", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(2800.5, 28.500158309936523, 598.2001342773438)
+end)   
+about:Button("乡村俱乐部", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1921.8756103515625, 29.927595138549805, -397.2474670410156)
+end)    
+about:Button("大山", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(2348.347412109375, 93.54085540771484, -1537.3157958984375)
+end)
+about:Button("总督海港", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(3335.737548828125, 52.90439224243164, 2773.038818359375)
+end)
+ local about = UITab2:section("『传送2』",false)
+   about:Button("加油站", function()
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(103.70025634765625, 29.586254119873047, -640.5997924804688)
+end)            
+        about:Button("加油站2" ,function()
+  plr.Character.HumanoidRootPart.CFrame = CFrame.new(930.7002563476562, 28.78978729248047, 643.4002075195312)      
+end)            
+        about:Button("港景" ,function()
+ plr.Character.HumanoidRootPart.CFrame = CFrame.new(2084.7998046875, 29.903459548950195, 769.199951171875)       
+end)           
+        about:Button("豪林公园" ,function()
+   plr.Character.HumanoidRootPart.CFrame = CFrame.new(1761.7999267578125, 29.472471237182617, -902.800048828125)     
+end)           
+        about:Button("医院" ,function()
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(937.100341796875, 25.84402084350586, -183.69976806640625)
+ end)       
+        about:Button("工业区" ,function() 
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(1779.7998046875, 29.844844818115234, 3471.2001953125)
+ end)           
+    about:Button("物流区" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(588.2861938476562, 83.35018157958984, 2529.95361328125)
+end)        
+    about:Button("大师酒店" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(2736.1591796875, 42.75144958496094, -202.09945678710938)
+ end)       
+    about:Button("军事基地" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1706.494873046875, 27.70369529724121, 2469.36181640625)
+end)        
+    about:Button("拿冠悬崖" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(2736.1591796875, 42.75144958496094, -202.09945678710938)
+end)        
+    about:Button("核电站" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(1045.7999267578125, 28.789783477783203, -799.800048828125)
+end)        
+    about:Button("越野检测轨道" ,function() 
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1290.662353515625, 27.948495864868164, 2928.018310546875)
+  end)              
+
+local about = UITab2:section("『传送3』",false)
+            about:Button("海景点" , function()
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(2270.302001953125, 204.987548828125, -2040)
+  end)                       
+            about:Button("炼油厂" , function() 
+         plr.Character.HumanoidRootPart.CFrame = CFrame.new(2841.7998046875, 21.67340087890625, 4207.2001953125)   
+end)  
+            about:Button("老镇" , function() 
+          plr.Character.HumanoidRootPart.CFrame = CFrame.new(208, 28.39672088623047, 208)  
+    end)                         
+            about:Button("流行的街道" , function() 
+           plr.Character.HumanoidRootPart.CFrame = CFrame.new(845.9000244140625, 28.600147247314453, 183) 
+      end)            
+            about:Button("小镇" , function() 
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(644.9000244140625, 27.57611656188965, 744)    
+   end)               
+            about:Button("圣纳尔观点" , function() 
+       plr.Character.HumanoidRootPart.CFrame = CFrame.new(784, 350.17938232421875, -1568)     
+ end)                 
+            about:Button("阳光初级小学" , function() 
+      plr.Character.HumanoidRootPart.CFrame = CFrame.new(312.70025634765625, 26.738418579101562, 418.40020751953125)      
+ end)                 
+            about:Button("日落树丛" , function() 
+       plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1291.3997802734375, 28.396724700927734, -576.6998291015625)     
+  end)                
+            about:Button("出租车" , function() 
+          plr.Character.HumanoidRootPart.CFrame = CFrame.new(1684.4002685546875, 28.60015106201172, 208.9002227783203)  
+    end)              
+            about:Button("高中" , function() 
+       plr.Character.HumanoidRootPart.CFrame = CFrame.new(2504.000244140625, 28.87942886352539, 465.90020751953125)     
+   end)               
+            about:Button("购物中心" , function() 
+         plr.Character.HumanoidRootPart.CFrame = CFrame.new(-769.999755859375, 27.03134536743164, -254.7998046875)   
+  end)                
+            about:Button("海边" , function() 
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(3060.900390625, 26.272811889648438, 377.5002136230469)    
+  end)                
+            about:Button("比赛俱乐部" , function()
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1474.999755859375, 26.168792724609375, 73.7001953125)    
+  end)                
+local UITab2 = win:Tab("『其他』",'16060333448')
+
+local about = UITab2:section("『xxxxxxxgo』",true)
+
+about:Label("车辆买家    作者xxxxxgo  ",function()
+end)
+about:Slider("车名停工测试",function(object, focus)
+  if focus then
+      local car = tostring(object.Text)
+for i,v in pairs(require(game:GetService("ReplicatedStorage").ModuleLists.CarList)) do
+    if string.find(v.name,car) then
+       game:GetService("ReplicatedStorage").DataStore.PurchaseVehicle:InvokeServer(v.id)
+    end
+    end
+end
+end)
+about:Button("解锁出租车雷达",function()
+    game:GetService("Players").LocalPlayer.variables.vip.Value = true
+end)
+about:Button("显示玩家统计",function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,"F9",false,game)
+    print("Players Owned Cars")
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.ClassName == "Player" then
+            print("------xgo---------"..v.Name.." OwnedCars".."-----xgo----------")
+      local tables = {}
+      local racetable = {}
+        for a,b in pairs(v.Data.OwnedCars:GetChildren()) do
+            if b:IsA("BoolValue") and b.Value == true then
+               for c,d in pairs(require(game:GetService("ReplicatedStorage").ModuleLists.CarList)) do
+               if d.id == tonumber(b.Name) then
+               table.insert(tables,d.name..",")
+            end
+        end
+        end
+        end
+
+    warn(unpack(tables))
+    print("-------xgo---------"..v.Name.." Currencies".."--------xgo-------")
+    warn(v.variables.candy.Name..": "..v.variables.candy.Value,v.variables.rep.Name..": "..v.variables.rep.Value,v.Data.coconuts.Name..": "..v.Data.coconuts.Value)
+    print("-------xgo--------"..v.Name.." Race Best Times".."-------xgo-------")
+    for ok,p in pairs(v.Data.BestTimes:GetAttributes()) do
+    rawset(racetable,ok,p)
+    end
+    for lol,s in pairs(racetable) do
+        warn(lol,s)
+    end
+    end
+    end
+end)
+about:Button("重置玩家",function()
+    game.Players.LocalPlayer.Character:BreakJoints()
+end)
+about:Button("删除AI车辆",function()
+    game:GetService("Workspace").Tracks:Destroy()
+end)
+about:Button("去除锁定区域障碍",function()
+    game:GetService("Workspace").AreaLocked:Destroy()
+end)
+
+about:Toggle("甜甜圈上帝","Toggle",false, function(state)
+getfenv().donut = (state and true or false)
+while getfenv().donut do
+    task.wait()
+pcall(function()
+local part = game.Players.LocalPlayer.Character.Humanoid.SeatPart
+part.RotVelocity = Vector3.new(0,part.RotVelocity.Y+10,0)
+end)
+end
+end)
