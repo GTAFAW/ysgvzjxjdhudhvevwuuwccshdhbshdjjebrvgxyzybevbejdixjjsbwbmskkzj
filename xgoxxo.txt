@@ -356,7 +356,7 @@ example:AddToggle("自动升级办公室", function(state)
       example:AddLabel("传送1",function()
       end)
     example:AddDropdown({"传送点","山毛榉","山毛榉海滩","老板机场","桥视图","雪松侧","中央银行","中央城市","城市公园","椰子公园","乡村俱乐部","大山","总督海港"},function(state) --true/false, replaces the current title "Dropdown" with the option that t
-        if state == "山毛榉木" then
+        if state == "山毛榉" then
             local chr = game.Players.LocalPlayer.Character
             local hum = chr.Humanoid
             if hum.SeatPart == nil then
@@ -364,7 +364,7 @@ example:AddToggle("自动升级办公室", function(state)
             elseif hum.SeatPart ~= nil then
                 hum.SeatPart.Parent.Parent:PivotTo(game:GetService("ReplicatedStorage").Places.Beechwood.CFrame+Vector3.new(0,40,0))
             end
-            elseif state == "山毛榉木海滩" then
+            elseif state == "山毛榉海滩" then
                 local location = "Beechwood Beach"
                 local chr = game.Players.LocalPlayer.Character
                 local hum = chr.Humanoid
