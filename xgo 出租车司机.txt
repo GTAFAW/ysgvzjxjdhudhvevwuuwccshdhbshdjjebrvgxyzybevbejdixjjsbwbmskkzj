@@ -714,7 +714,6 @@ about:Dropdown("传送点",   "FreeBoat", {""海景点","炼油厂","老镇","�
 local UITab2 = win:Tab("『杂项』",'16060333448')
 
 local about = UITab2:section("『xxxxxxxgo』",true)
-Button("上帝模式",function()
 
 about:Label("车辆买家",function()
 end)
